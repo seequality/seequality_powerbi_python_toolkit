@@ -8,6 +8,20 @@ Before start please adjust the config file and change the name from "config_samp
 python seequality_powerbi_python_toolkit.py -m "get-and-check-all" -o "file"
 python seequality_powerbi_python_toolkit.py -m "get-and-check-dashboards-only" -o "file"
 
+## sample output
+The output of the script is the text file with all of the Power BI element's names and url's including the information about the elements that contains at least one visual errors. Apart from the text file there will be also the screenshoot of the visual error if any. 
+```
+app > <app_name> > <app_url>
+workspace > <workspace_name> > <workspace_url>
+workspace report > <workspace_name> > <workspace_report_name> > <workspace_report_url>
+workspace dashboard > <workspace_name> > <dashboard_name> > <workspace_dashboard_url>
+workspace report tabs >  > <workspace_name> > <workspace_report_name> > <workspace_report_url> > <workspace_report_tab_name> > <workspace_report_tab_url>
+workspace report tabs visual error >  > <workspace_name> > <workspace_report_name> > <workspace_report_url> > <workspace_report_tab_name> > <workspace_report_tab_url>
+workspace dashboard visual error > <workspace_name> > <dashboard_name> > <workspace_dashboard_url>
+```
+Sample screenshot:
+![Visual error screnshot](https://pl.seequality.net/wp-content/uploads/2018/08/visualerror_20180819_112554_2f4acbd67d90495eb14a6fad44ca223a.png)
+
 ## versions
 0.9 - current version
 
