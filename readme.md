@@ -57,4 +57,5 @@ Sample screenshot:
 
 ### More info
 Polish blog post: not avaliable yet
+
 English blog post: not avaliable yet
