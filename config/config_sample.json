@@ -1,0 +1,24 @@
+{
+    "tech":
+    {
+        "base_url": "https://www.powerbi.com", 
+        "base_url_after_login": "https://app.powerbi.com",
+        "chromium_path": "<PATH_TO_CHROMIUM_DRIVER>", 
+        "time_sleep_normal_seconds": 5,
+        "time_sleep_report_seconds": 10,
+        "page_load_timeout": 120
+    }, 
+    "user":
+    {
+        "powerbi_user_email": "<POWERBI_USER_EMAIL>",
+        "powerbi_user_name": "<POWERBI_USER_NAME>", 
+        "powerbi_user_password": "<POWERBI_USER_PASSWORD>" 
+    },
+    "system":
+    {
+        "log_save_code_error_screenshot" : "True",
+        "log_img_directory_path": ".\\files\\img\\" ,
+        "log_app_directory_path": ".\\files\\output_log\\" ,
+        "log_data_directory_path": ".\\files\\output_data\\" 
+    }
+}
