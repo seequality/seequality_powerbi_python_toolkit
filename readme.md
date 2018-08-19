@@ -16,13 +16,13 @@ python seequality_powerbi_python_toolkit.py -m "get-and-check-dashboards-only" -
 2) if there are multiple tabs with the same name in one report those tabs will not be checked. The workaround would be to change the names and avoid duplicates. Please note that id there is any duplciate they will be saved in the output data directory
 3) print screen of workspace dashboard might be not accurate. There is a problem with taking a fullscreen print screen for chromium web driver. There needs to be custom method implemented or firefox web driver used to solve the issue. This will be taken into consideration for the next release. Please note that for the reports tab's errors in most cases it should be fine 
 
-## future improvements plan
+## future improvements
 1) add getting the particular error message for each visual's error
 2) add checking only single workspace/app/report
 3) add checking visual errors for reports/dashboards imported from the flat files
 4) get rid of hardcoded sensitive data in the config file
 4) performancec improvements
 
-## More info
+### More info
 Polish blog post: not avaliable yet
 English blog post: not avaliable yet
