@@ -1,5 +1,5 @@
 # seequality powerbi python toolkit
-This toolkit is made by seequality.net members and is build to help when working with PowerBI.
+This toolkit is made by seequality.net and is build to help developers working with PowerBI.
 
 ## prerequisites
 1) Python (3.6.4)
@@ -13,7 +13,11 @@ This toolkit is made by seequality.net members and is build to help when working
 Before start please adjust the config file and change the name from "config_sample.json" to "config.json"
 
 ## sample usage
-get-and-check-all - get all elements from powerbi.com and check errors in workspace dashboards and workspace reports
+Script takes two arguments:
+1) m - method name
+2) o - output name
+
+get-and-check-all - get all elements from powerbi.com and check errors in workspaces dashboards and workspaces reports
 ```
 python seequality_powerbi_python_toolkit.py -m "get-and-check-all" -o "file"
 ```
@@ -21,12 +25,18 @@ get-and-check-all - get workspaces and dashboards elements from powerbi.com and 
 ```
 python seequality_powerbi_python_toolkit.py -m "get-and-check-dashboards-only" -o "file"
 ```
-The avaliable output options are:
+
+Avaliable method options are:
+* get-and-check-all
+* get-and-check-dashboards-only
+
+
+Avaliable output options are:
 * file
 * console
 
 ## sample output
-The output of the script is the text file with all of the Power BI element's names and url's including the information about the elements that contains at least one visual errors. Apart from the text file there will be also the screenshoot of the visual error if any. 
+The output of the script is the text file with all of the Power BI element's names and url's including the information about the elements that contains at least one visual error. Apart from the text file there will be also the screenshoot with the visual error if any. 
 ```
 app > <app_name> > <app_url>
 workspace > <workspace_name> > <workspace_url>
@@ -44,16 +54,16 @@ Sample screenshot:
 0.9 - current version
 
 ## known issues
-1) if there is no dashboards in the workspace script will not be able to get the list of the reports. There is an issue and if there is no dashbaords the link is redirecting to the list of dashboards even if the link is set to the reports. The workaround would be to always create at least one dashboard. The dashboards can be set as "not to publish" for the app which should be fine.
-2) if there are multiple tabs with the same name in one report those tabs will not be checked. The workaround would be to change the names and avoid duplicates. Please note that id there is any duplciate they will be saved in the output data directory
-3) print screen of workspace dashboard might be not accurate. There is a problem with taking a fullscreen print screen for chromium web driver. There needs to be custom method implemented or firefox web driver used to solve the issue. This will be taken into consideration for the next release. Please note that for the reports tab's errors in most cases it should be fine 
+1) if there is no dashboards in the workspace script will not be able to get the list of the reports. If there is no dashbaords the link is redirecting to the list of dashboards even if the link is set to the reports. The workaround would be to always create at least one dashboard. The dashboards can be set as "not to publish" for the app which should be fine.
+2) if there are multiple tabs with the same name in one report those tabs will not be checked. The workaround would be to change the names and avoid duplicates. Please note that if there is any duplciate they will be saved in the output data directory
+3) print screen of workspace dashboard might be not accurate. There is a problem with taking a fullscreen print screen for chromium web driver. There needs to be custom method implemented or firefox web driver used to solve the issue. This will be taken into consideration for the next release. Please note that for the reports tab's errors in most cases the screnshot should be just fine 
 
 ## future improvements
 1) add getting the particular error message for each visual's error
 2) add checking only single workspace/app/report
-3) add checking visual errors for reports/dashboards imported from the flat files
+3) add checking visual errors for reports/dashboards imported from the flat file
 4) get rid of hardcoded sensitive data in the config file
-4) performancec improvements
+4) performance improvements - currently it's taking around 60 mintues to get and check about 15 apps, 20 workspaces, 50 reports, 20 dashboards, 100 tabs
 
 ### More info
 1) Polish blog post: https://pl.seequality.net/power-bi-wykrywanie-bledow-na-opublikowanych-raportach
