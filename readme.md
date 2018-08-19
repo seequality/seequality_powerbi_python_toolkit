@@ -56,6 +56,5 @@ Sample screenshot:
 4) performancec improvements
 
 ### More info
-Polish blog post: not avaliable yet
-
-English blog post: not avaliable yet
+1) Polish blog post: https://pl.seequality.net/power-bi-wykrywanie-bledow-na-opublikowanych-raportach
+2) English blog post: not avaliable yet
